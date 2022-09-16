@@ -1,0 +1,14 @@
+@import '../util/variables';
+
+.list {
+
+    padding: 0;
+
+    &__item {
+        list-style-type: none;
+        border-bottom: $borders;
+        padding: 10px 0;
+        margin: 0 25px;
+    }
+
+}

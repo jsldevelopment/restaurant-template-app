@@ -1,0 +1,150 @@
+@import '../util/variables';
+
+.filter {
+
+    padding: 5px;
+    margin: 0 10px;
+    border-bottom: $borders;
+
+    .filter-form {
+
+        display: grid;
+        margin: 5px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        @media screen and (max-width: $size) {
+        
+            background-size: 30px;
+            font-size: 24px;
+            justify-content: space-between;
+            grid-column-gap: 1px;
+            grid-row-gap: 10px;
+
+        }
+    
+        @media screen and (min-width: $size) {
+
+            background-size: 30px;
+            font-size: 24px;
+            justify-content: space-between;
+            grid-column-gap: 5px;
+
+        }
+
+        &__name {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-image: url('../media//magnifying-glass-solid.svg');
+            background-repeat: no-repeat;
+            background-position: 2%;
+            border: $borders;
+            border-radius: 5px;
+
+            @media screen and (max-width: $size) {
+                
+                grid-column: span 3;
+                background-size: 20px;
+                font-size: 14px;
+                padding: 5px;
+                padding-left: 30px;
+
+            }
+        
+            @media screen and (min-width: $size) {
+
+                grid-column: span 2;
+                background-size: 30px;
+                font-size: 16px;
+                padding: 5px;
+                padding-left: 40px;
+
+            }
+
+        }
+
+        &__cuisine {
+
+            border-radius: 5px;
+            border: $borders;
+            background-color: white;
+            
+            &:hover {
+                cursor: pointer;
+                background-color: $highlight;
+            }
+
+            @media screen and (max-width: $size) {
+                grid-column: span 3;
+                padding: 1px;
+                padding-left: 5px;
+                font-size: 14px;
+            }
+        
+            @media screen and (min-width: $size) {
+                grid-column: span 2;
+                padding: 5px;
+                padding-left: 10px;
+                font-size: 16px;
+            }
+
+        }
+    
+        &__stars {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+            @media screen and (max-width: $size) {
+                justify-content: start;
+                grid-column: span 5;
+                width: 100px;
+            }
+        
+            @media screen and (min-width: $size) {
+                width: 200px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+    
+            &--false {
+    
+                content: url('../media/star-regular.svg');
+                width: 35px;
+                height: 35px;
+    
+            }
+    
+            &--true {
+    
+                content: url('../media/star-solid.svg');
+                width: 35px;
+                height: 35px;
+    
+            }
+    
+        }
+
+        &__reset {
+            border-radius: 5px;
+            border: $borders;
+            margin-left: auto;
+            width: 80px;
+            height: 40px;
+            background-color: white;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $highlight;
+            }
+
+        }
+
+    }
+
+}

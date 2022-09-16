@@ -1,0 +1,17 @@
+@import '../util/variables';
+
+.restaurant {
+
+    @media screen and (max-width: $size) {
+        width: $screen-size-mobile;
+    }
+
+    @media screen and (min-width: $size) {
+        width: $screen-size-desktop;
+    }
+
+    margin: auto;
+    background-color: $background-color;
+    height: 100%;
+
+}
